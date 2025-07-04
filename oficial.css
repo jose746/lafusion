@@ -1,0 +1,1046 @@
+
+ /* Estilos base (Mobile First): Se aplican a todas las pantallas, especialmente a las más pequeñas (ej. 360px) */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import "tailwindcss";
+
+body {
+    font-family: 'Orbitron','Arial' sans-serif;
+   /* font-family: 'Arial', sans-serif;*/
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    background-image: linear-gradient(to bottom, #000000 0%, #050505 50%, #05e9f5 100%);
+    transition: background-image 0.8s ease, background-color 0.8s ease; /* Transición suave para el fondo */
+}
+
+
+.image-grid-separator {
+    grid-column: 1 / -1; /* Esto hace que el separador abarque todas las columnas de tu cuadrícula */
+    text-align: center;
+    margin: 20px 0; /* Añade espacio arriba y abajo del separador */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #060606; /* Un color gris oscuro para el texto */
+    padding: 10px;
+    background-color: #dbdada; /* Un color de fondo claro para el separador */
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Header */
+.header {
+    padding: 1.5rem 0; /* Padding ajustado para móviles */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen del header que el usuario puede cambiar */
+.header-image-actual {
+    max-width: 150px; /* Tamaño de logo en móvil */
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Efecto SVG de fondo para el header (opcional, puedes quitarlo si solo quieres tu imagen) */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('goku1.jpg'); /* [Image of Goku] */
+    height: 250px; /* **Altura por defecto para pantallas móviles (Android/iPhone)**, ajustada para ser más compacta */
+    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el área del header, recortando si es necesario */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    opacity: 0.7;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 1.8rem; /* Tamaño de fuente para móviles */
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.139);
+}
+
+.header p {
+    font-size: 0.9rem; /* Tamaño de fuente para móviles */
+    opacity: 0.9;
+}
+
+/* Navigation */
+.nav-container {
+    background-color: rgba(0, 0, 0, 0.144);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-container.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 25px rgba(4, 232, 240, 0.813);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem; /* Padding ajustado para móviles */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+}
+
+.nav-item {
+    background: linear-gradient(135deg, #e3e3e3, #0eeae2, #c6c6c6);
+    color: rgb(9, 9, 9);
+    border: none;
+    padding: 20px 15px; /* Padding ajustado para móviles */
+    margin: 3px; /* Margen ajustado para móviles */
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem; /* Tamaño de fuente para móviles */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1; /* Permite que los ítems se expandan en el espacio */
+    max-width: calc(50% - 6px); /* 2 ítems por fila en pantallas muy pequeñas */
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav-item:hover::before {
+    left: 100%;
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.nav-item.active {
+    background: linear-gradient(135deg, #ffffff, #01f2ff, #f7f7f7);
+    transform: scale(1.05);
+}
+.title {
+    margin-top: 5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/* texto oferta*/
+/*.text-info {
+    background: linear-gradient(to bottom, #ffffffd6, #e7e6e6, #09ced5d9); 
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+}*/
+
+/* Base styles for .text-info */
+/* Estilos base para .text-info */
+.text-info {
+    background: linear-gradient(to bottom, #ffffffd6, #e7e6e6, #09ced5d9); 
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    color: #000000;
+    text-align: center;
+    align-items: center; /* Es probable que esto no tenga un efecto visible aquí a menos que sea un contenedor flex */
+    justify-content: space-between; /* Es probable que esto no tenga un efecto visible aquí a menos que sea un contenedor flex */
+    padding: 10px; /* Se añadió un padding base para una mejor apariencia */
+    font-size: 16px; /* Se añadió un tamaño de fuente base */
+}
+
+/* --- */
+
+/* @media para pantallas de 360px y más */
+@media (min-width: 360px) {
+    .text-info {
+        margin-top: 10px; /* Se reduce ligeramente el margen para pantallas más pequeñas */
+        padding: 15px; /* Se aumenta el relleno */
+        font-size: 14px; /* Se ajusta el tamaño de la fuente para legibilidad en pantallas más pequeñas */
+    }
+}
+
+/* --- */
+
+/* @media para pantallas de 480px y más */
+@media (min-width: 480px) {
+    .text-info {
+        margin-top: 20px; /* Se ajusta el margen para un poco más de espacio */
+        padding: 20px; /* Más relleno */
+        font-size: 16px; /* Tamaño de fuente estándar */
+    }
+}
+
+/* --- */
+
+/* @media para pantallas de 768px y más (común para tablets) */
+@media (min-width: 768px) {
+    .text-info {
+        margin-top: 30px; /* Más margen desde la parte superior */
+        padding: 25px; /* Relleno generoso */
+        font-size: 18px; /* Tamaño de fuente más grande para mejor legibilidad en tablets/escritorios */
+    }
+}
+
+
+/* Botón de cerrar general para todos los modales */
+.close-btn {
+    color: #000000;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 2001;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+
+/* Contenido del Carrito (ahora formulario de pedido de un solo producto) */
+.cart-content {
+    background: linear-gradient(to bottom, #ffffff, #e9e8e8, #07aced);
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transform: translateY(-50px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-align: center;
+}
+
+.cart-popup.show .cart-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.cart-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #667eea;
+    text-align: center;
+}
+
+
+
+
+/* Estilos para el resumen del producto en el carrito (imagen y título) */
+.cart-product-summary {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.cart-product-summary img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto 10px auto; /* <-- margen vertical + centrado horizontal */
+    display: block; /* <-- necesario para que margin auto funcione */
+}
+
+.cart-product-summary h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+
+.cart-product-summary .price {
+    font-size: 1.1rem;
+    color: #ff6106;
+    font-weight: bold;
+}
+
+/* Cart Form */
+.cart-form {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Estilos para los grupos de botones de opciones (Color, Estilo, Talla) */
+.option-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.option-buttons button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    flex-grow: 1;
+    min-width: 80px;
+    text-align: center;
+}
+
+.option-buttons button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+/* Estilo para el botón seleccionado */
+.option-buttons button.selected {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-color: #667eea;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+}
+
+.confirm-order-btn {
+    background: linear-gradient(135deg, #0303fa, #4516aa);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgb(207, 14, 255);
+}
+
+.confirm-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* Utility classes (keep at the end) */
+.hidden {
+    display: none !important;
+}
+
+/* Fade-in animation for content (already in CSS) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+
+
+
+
+
+/* Contenido de las páginas emergentes de navegación */
+.page-popup-content {
+    background: linear-gradient(to top, #cccccc, #dcdcdc, #07caed);
+    padding: 1.5rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transform: translateY(-50px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.page-popup.show .page-popup-content {
+    transform: translateY(0);
+    opacity: 5;
+}
+
+
+.page-popup.show .page-popup-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.page-popup h2 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.page-popup p {
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.page-popup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+/* Image Grid - Contenedor principal para la cuadrícula */
+/* Estilos base, aplicados por defecto (considerado para pantallas < 359px si no hay @media más específica) */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Base de 2 columnas */
+    gap: 1rem; /* Base de espacio entre imágenes */
+    margin-top: 2rem;
+}
+
+/* Image Item - Estilos para cada "tarjeta" individual que contiene la imagen */
+.image-item {
+    position: relative;
+    border: 2px solid rgb(0, 247, 255);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgb(1, 247, 255);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #ffffff, #e7e6e6, #07c0d5);
+    height: 180px; /* Base de altura de la tarjeta */
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Image inside Image Item - Estilos para la imagen real */
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.image-item:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Nuevos Estilos para el botón y las imágenes ocultas --- */
+
+/* Contenedor para las imágenes ocultas inicialmente */
+.hidden-images {
+    display: none; /* Oculto por defecto */
+    grid-column: 1 / -1; /* Esto es para cuando se haga visible */
+}
+
+/* Cuando JavaScript añade la clase 'show', se convierte en grid y se hace visible */
+.hidden-images.show {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* Base de espacio entre imágenes */
+    margin-top: 2rem;
+    /* Las propiedades de grid-template-columns y gap se definirán en las @media queries */
+}
+
+
+/* Contenedor del botón "Ver más" */
+.load-more-button-container {
+    grid-column: 1 / -1; /* Abarca todas las columnas */
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+/* Estilos para el botón "Ver más" */
+#loadMoreBtn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#loadMoreBtn:hover {
+    background: linear-gradient(to right, #0056b3, #003d80);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.6);
+}
+
+#loadMoreBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+}
+
+/* --- Estilos de Modales (incluyendo tus preferencias) --- */
+.modal, .page-popup, .cart-popup {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffffb4, #e7e6e6b4, #07c0d5ce);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show, .page-popup.show, .cart-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content-wrapper {
+    background: linear-gradient(to bottom, #ffffff, #e7e6e6, #07c0d5);
+    padding: 1.5rem; /* Valor base */
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px; /* Valor base */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 30px rgb(2, 2, 2);
+    transform: translateY(-50px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.show .modal-content-wrapper {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-content-wrapper img {
+    width: 100%;
+    height: 250px; /* Valor base */
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Otros estilos de carrito y popups que no se modificaron */
+.cart-content {
+    padding: 1rem; /* Base, ajustado en @media */
+    width: 98%; /* Base, ajustado en @media */
+}
+.cart-product-summary img {
+    width: 120px; /* Base, ajustado en @media */
+    height: 120px; /* Base, ajustado en @media */
+}
+
+
+/* --- Media Queries (Mobile First) --- */
+
+/* Para pantallas extremadamente pequeñas (hasta 359px de ancho) */
+/* NOTA: Estos estilos se aplicarán ANTES de cualquier min-width si la pantalla es <= 359px.
+         Aquí redefino los valores de la cuadrícula y el botón para pantallas muy pequeñas. */
+@media (max-width: 359px) {
+    .header {
+        padding: 1rem 0;
+    }
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    .header p {
+        font-size: 0.8rem;
+    }
+    .nav-item {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        max-width: calc(50% - 6px);
+    }
+    .image-grid {
+        gap: 0.8rem; /* Tu valor para pantallas muy pequeñas */
+    }
+    .image-item {
+        height: 160px; /* Tu valor para pantallas muy pequeñas */
+    }
+    /* Estilos para el bloque de imágenes ocultas cuando se muestre en esta resolución */
+    .hidden-images.show {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas muy pequeñas */
+        gap: 0.8rem; /* Igual que el .image-grid */
+    }
+    #loadMoreBtn { /* Ajuste del botón para pantallas muy pequeñas */
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .modal-content-wrapper {
+        padding: 1rem;
+        width: 95%;
+    }
+    .modal-content-wrapper img {
+        height: 200px;
+    }
+    .cart-content {
+        padding: 1rem;
+        width: 98%;
+    }
+    .cart-product-summary img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+/* Para pantallas de 360px (Teléfonos pequeños como iPhone SE en adelante) y superiores */
+/* @media (min-width: 360px) { ... } -- Los estilos base ya cubren esto en tu setup,
+   a menos que necesites algo específico entre 360px y 479px que no sea el 480px.
+   Si los estilos de 480px son tu próximo nivel, esta media query puede ser omitida
+   o usarse para ajustes muy finos. Por ahora, dejaré que 480px tome el control.
+   Si necesitas un comportamiento distinto para 360-479px que no es el base ni el de 480px,
+   podríamos añadirlo aquí. */
+
+
+/* Para pantallas de 480px (Móviles más grandes) y superiores */
+@media (min-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    .header p {
+        font-size: 1rem;
+    }
+    .header-image-actual {
+        max-width: 180px;
+    }
+    .nav {
+        padding: 0.8rem;
+    }
+    .nav-item {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        max-width: calc(33.33% - 6px);
+    }
+    .image-grid {
+        gap: 1.2rem; /* Tu valor para móviles más grandes */
+    }
+    .image-item {
+        height: 200px; /* Tu valor para móviles más grandes */
+    }
+    /* Estilos para el bloque de imágenes ocultas cuando se muestre en esta resolución */
+    .hidden-images.show {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles más grandes */
+        gap: 1.2rem; /* Igual que el .image-grid */
+    }
+    #loadMoreBtn { /* Ajuste del botón para móviles más grandes */
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+
+    .modal-content-wrapper {
+        padding: 2rem; /* Tu valor para móviles más grandes */
+        max-width: 550px; /* Tu valor para móviles más grandes */
+    }
+    .modal-content-wrapper img {
+        height: 280px; /* Tu valor para móviles más grandes */
+    }
+    .page-popup-content, .cart-content {
+        padding: 2rem;
+    }
+    .page-popup h2 {
+        font-size: 2rem;
+    }
+    .page-popup p {
+        font-size: 1rem;
+    }
+    .cart-content h2 {
+        font-size: 2.2rem;
+    }
+    .cart-product-summary img {
+        width: 180px;
+        height: 180px;
+    }
+    .cart-product-summary h4 {
+        font-size: 1.3rem;
+    }
+    .cart-product-summary .price {
+        font-size: 1.2rem;
+    }
+    .remove-item-btn {
+        font-size: 0.9rem;
+    }
+    .form-group label {
+        font-size: 1rem;
+    }
+    .form-group input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    .option-buttons button {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+        min-width: unset;
+    }
+    .confirm-order-btn {
+        font-size: 1.1rem;
+    }
+}
+
+/* Para pantallas de 768px (Tablets) y superiores */
+@media (min-width: 768px) {
+    .header {
+        padding: 2rem 0;
+    }
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    .header p {
+        font-size: 1.2rem;
+    }
+    .header-image-actual {
+        max-width: 200px;
+    }
+    .nav {
+        padding: 1rem;
+    }
+    .nav-item {
+        padding: 12px 24px;
+        margin: 0 8px;
+        font-size: 1rem;
+        max-width: unset;
+        flex-grow: 0;
+    }
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .image-item {
+        height: 220px;
+    }
+    /* Estilos para el bloque de imágenes ocultas cuando se muestre en esta resolución */
+    .hidden-images.show {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
+        gap: 1.5rem; /* Igual que el .image-grid */
+    }
+    #loadMoreBtn { /* Ajuste del botón para tablets */
+        padding: 15px 30px; /* Un poco más grande */
+        font-size: 1.2em;
+    }
+
+    .modal-content-wrapper {
+        padding: 2.5rem;
+        max-width: 600px;
+    }
+    .modal-content-wrapper img {
+        height: 300px;
+    }
+    .page-popup-content {
+        padding: 2.5rem;
+        max-width: 600px;
+    }
+    .cart-content {
+        padding: 2.5rem;
+        max-width: 650px;
+    }
+    .cart-product-summary img {
+        width: 200px;
+        height: 200px;
+    }
+    .cart-product-summary h4 {
+        font-size: 1.4rem;
+    }
+    .cart-product-summary .price {
+        font-size: 1.3rem;
+    }
+    .option-buttons button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas de 1024px (Escritorio) y superiores */
+@media (min-width: 1024px) {
+    .header h1 {
+        font-size: 3rem;
+    }
+    .header p {
+        font-size: 1.3rem;
+    }
+    .header-image-actual {
+        max-width: 250px;
+    }
+    .nav-item {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    .image-item {
+        height: 250px;
+    }
+    /* Estilos para el bloque de imágenes ocultas cuando se muestre en esta resolución */
+    .hidden-images.show {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en escritorio */
+        gap: 2rem; /* Igual que el .image-grid */
+    }
+    #loadMoreBtn { /* Ajuste del botón para escritorio */
+        padding: 18px 40px; /* Botón más grande */
+        font-size: 1.3em;
+    }
+
+    .modal-content-wrapper {
+        padding: 3rem;
+        max-width: 800px;
+    }
+    .modal-content-wrapper img {
+        height: 400px;
+    }
+    .page-popup-content {
+        max-width: 700px;
+    }
+    .cart-content {
+        max-width: 750px;
+    }
+    .cart-product-summary img {
+        width: 220px;
+        height: 220px;
+    }
+    .cart-product-summary h4 {
+        font-size: 1.5rem;
+    }
+    .cart-product-summary .price {
+        font-size: 1.4rem;
+    }
+}
+
+/* ESTE ES EL DEGRADADO ESTÁTICO (NEGRO/NOCHE) QUE SERÁ EL PREDETERMINADO
+ * AL CARGAR LA PÁGINA POR PRIMERA VEZ O CUANDO EL USUARIO LO DEJE ASÍ.
+ */
+/* Clase CSS para el degradado animado (activado por el botón) */
+.gradient-animated {
+    background-image: linear-gradient(270deg, #8A2BE2, #ADD8E6, #FF69B4, #00CED1); /* Violeta, Azul claro, Rosa cálido, Turquesa oscuro */
+    background-size: 600% 600%; /* Tamaño esencial para el movimiento de la animación */
+    animation: gradientAnimation 15s ease infinite; /* Aplica la animación */
+}
+
+/* Definición de los keyframes para la animación del degradado */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; } /* Posición inicial */
+    50% { background-position: 100% 50%; } /* Posición a la mitad */
+    100% { background-position: 0% 50%; } /* Vuelve a la posición inicial */
+}
+
+/* Contenedor principal del botón de toggle (sol/luna) */
+.theme-toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem; /* Padding interno */
+    border-radius: 9999px; /* Totalmente redondo/píldora */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Sombra */
+    transition: all 0.3s ease-in-out; /* Transición suave para el botón */
+    width: 100px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    cursor: pointer;
+    font-size: 24px; /* Tamaño base de los íconos */
+    position: relative; /* Para posicionar los íconos y el 'switch' */
+    /* Estilos por defecto para el botón (cuando el degradado no está animado) */
+    background-color: #e2e8f0; /* Fondo claro para el botón */
+    border: 1px solid #cbd5e1; /* Borde sutil */
+}
+
+/* Estilos para los íconos dentro del botón */
+.theme-toggle-button ion-icon {
+    position: absolute; /* Posicionamiento absoluto para superponer/alinear */
+    transition: opacity 0.3s ease ease-in-out, transform 0.3s ease, color 0.3s ease ease-in-out; /* Transiciones para el estado activo/inactivo */
+    font-size: 24px; /* Tamaño del ícono */
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%); /* Centrado vertical */
+}
+
+/* Estilos del ícono de sol cuando el degradado NO está animado (activo) */
+/* Esto significa que el fondo es estático (modo noche/negro), por lo que el sol está "apagado" y la luna "encendida" */
+body:not(.gradient-animated) #sunIcon {
+    opacity: 0.5; /* Sol inactivo */
+    color: #94a3b8; /* Color gris para el sol inactivo */
+    right: 8px; /* Posicionar el sol a la izquierda */
+    transform: translateY(-50%) scale(0.8); /* Ligeramente más pequeña */
+}
+
+/* Estilos del ícono de luna cuando el degradado NO está animado (activo - modo noche) */
+body:not(.gradient-animated) #moonIcon {
+    opacity: 1; /* Luna activa */
+    color: #ffc404; /* Color amarillo claro para la luna (como si brillara) */
+    left: 8px; /* Posicionar la luna a la derecha */
+    transform: translateY(-50%) scale(1); /* Tamaño normal */
+}
+
+/* Estilos del botón cuando el degradado SÍ está animado (modo día) */
+body.gradient-animated .theme-toggle-button {
+    background-color: #374151; /* Fondo más oscuro para el botón */
+    border: 1px solid #4b5563; /* Borde sutil */
+}
+
+/* Estilos del ícono de sol cuando el degradado SÍ está animado (activo - modo día) */
+body.gradient-animated #sunIcon {
+    opacity: 1; /* Sol activo */
+    color: #f59e0b; /* Color naranja brillante para el sol */
+    left: 8px; /* Posicionar el sol a la izquierda */
+    transform: translateY(-50%) scale(1);
+}
+
+/* Estilos del ícono de luna cuando el degradado SÍ está animado (inactivo) */
+body.gradient-animated #moonIcon {
+    opacity: 0.5; /* Luna inactiva */
+    color: #94a3b8; /* Color gris para la luna inactiva */
+    right: 8px; /* Posicionar la luna a la derecha */
+    transform: translateY(-50%) scale(0.8);
+}
+
+/* Animación del "interruptor" deslizante dentro del botón */
+.theme-toggle-button::before {
+    content: '';
+    position: absolute;
+    width: 32px; /* Tamaño del "interruptor" */
+    height: 32px;
+    background-color: white; /* Color del interruptor */
+    border-radius: 9999px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    left: 4px; /* Posición inicial del interruptor (para modo estático/noche) */
+}
+
+/* Mueve el interruptor a la izquierda cuando el degradado está animado (modo día) */
+body.gradient-animated .theme-toggle-button::before {
+    transform: translateX(40px); /* Mueve el interruptor a la derecha */
+    background-color: #2d3748; /* Color del interruptor en modo animado */
+}
+
+/* Tus estilos de .btn-7 si los quieres mantener para otros botones */
+.btn-7 {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    background-color: #2ecc71; /* Verde esmeralda */
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Para separar si hay otros botones */
+}
+
+.btn-7:hover {
+    background-color: #27ae60; /* Verde más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+footer {
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    text-align: center;
+    background-color: #cbcdcf;
+    color: #0a8dff;
+    padding: 25px;
+}
+.luna-sol {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-to-cart-btn {
+    padding: 5px;
+    color: #000000;
+}
+
+.add-to-cart-btn {
+    padding: 0.75rem 1.5rem;     /* Tamaño del área clicable */
+    font-size: 1rem;             /* Letra clara y legible (~16px) */
+    border: none;
+    border-radius: 0.5rem;       /* Bordes redondeados suaves */
+    background-color: #0e3df9;   /* Azul vibrante */
+    color: white;
+    text-align: center;
+    width: 100%;                 /* Ocupa todo el ancho en móviles */
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover{
+    background-color: #08b5ff;   /* Oscurece al pasar el mouse */
+}

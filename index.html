@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA FUSION</title>
+    <link rel="stylesheet" href="oficial.css">
+   
+    <!-- Normalize CSS (enlace externo) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" xintegrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>LA FUSION</h1>
+        </div>
+    </header>
+
+    <nav class="nav-container" id="navbar">
+        <div class="nav">
+              <button  class="nav-item active" data-page="inicio">
+                <ion-icon name="home"></ion-icon></button>
+                <button class="nav-item" data-page="perfil">
+                <ion-icon name="person"></ion-icon></button>
+            <button class="nav-item" data-page="mensajes">
+                <ion-icon name="call"></ion-icon> </button>
+            <button class="nav-item" data-page="ajustes">
+                <ion-icon name="cog"></ion-icon> </button>
+        </div>
+    </nav>
+
+    <div  class="luna-sol" id="luna-sol">
+        <button id="themeToggleButton" onclick="toggleGradientBackground()"
+            class="theme-toggle-button focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            <ion-icon id="sunIcon" name="sunny"></ion-icon>
+            <ion-icon id="moonIcon" name="moon"></ion-icon>
+        </button>
+    </div>
+
+<div class="text-info">
+<h4>
+    ¡Lleva tu Estilo a Otra Dimensión!
+</h4>
+<h4>Playeras con diseños 3D y calidad con tectinica impreso .</h4>
+<h4> OFERTA  </h4>
+<h4>
+    1 playera por $20 perfecta para probar la calidad
+</h4>
+<h4>Pack Ahorro
+
+    2 playeras por  $35 un precio especial.</h4>
+<h4>Combo Total
+
+    ¡Te llevas 3 playeras x $50 !</h4>
+</div>
+
+
+<div class="title">
+    <h4>talla  ... S ...</h4>
+</div>
+
+    <main class="main-content">
+        <!-- Contenedor principal de la cuadrícula de imágenes -->
+        <div class="image-grid" id="imageGrid">
+           
+            <!-- Cada imagen está envuelta en un div con data-product-id -->
+            <div class="image-item fade-in" data-product-id="1">
+                <img src="p1.jpg" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="2">
+                <img src="p2.jpg" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="3">
+                <img src="p3.jpg" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="4">
+                <img src="p4.jpg" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="5">
+                <img src="p5.jpg" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="6">
+                <img src="p6.JPEG" alt="playera">
+            </div>
+
+                <div class="image-item fade-in" data-product-id="7">
+                    <img src="p7.JPEG" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="8">
+                    <img src="p8.jpg" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="9">
+                    <img src="p9.jpg" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="10">
+                    <img src="p10.jpg" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="11">
+                    <img src="p11.jpg" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="12">
+                    <img src="p12.jpg" alt="playera">
+                </div>
+    
+                    <div class="image-item fade-in" data-product-id="13">
+                        <img src="p13.jpg" alt="playera">
+                    </div>
+
+                        <div class="image-item fade-in" data-product-id="14">
+                            <img src="p14.JPEG" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="15">
+                            <img src="p15.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="16">
+                            <img src="p16.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="17">
+                            <img src="p17.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="18">
+                            <img src="p18.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="19">
+                            <img src="p19.JPEG" alt="playera">
+                        </div>
+                
+                    
+                        
+                        
+        <div class="image-grid-separator">
+            <p>talla   ...M...</p>
+        </div>
+  
+                       
+    
+
+            <div class="image-item fade-in" data-product-id="20">
+                <img src="pm2.JPEG" alt="playera">
+            </div>
+            <div class="image-item fade-in" data-product-id="21">
+                <img src="pm20.JPEG" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="22">
+                <img src="pm22.JPEG" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="23">
+                <img src="pm23.JPEG" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="24">
+                <img src="pm24.JPEG" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="25">
+                <img src="pm25.jpg" alt="playera">
+            </div>
+
+            <div class="image-item fade-in" data-product-id="26">
+                <img src="pm26.jpg" alt="playera">
+            </div>
+
+                <div class="image-item fade-in" data-product-id="27">
+                    <img src="27.jpg" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="28">
+                    <img src="28.jpg" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="29">
+                    <img src="29.jpg" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="30">
+                    <img src="30.JPEG" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="31">
+                    <img src="31.JPEG" alt="playera">
+                </div>
+    
+                <div class="image-item fade-in" data-product-id="32">
+                    <img src="32.jpg" alt="playera">
+                </div>
+    
+                    <div class="image-item fade-in" data-product-id="33">
+                        <img src="33.jpg" alt="playera">
+                    </div>
+
+                        <div class="image-item fade-in" data-product-id="34">
+                            <img src="34.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="35">
+                            <img src="35.JPEG" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="36">
+                            <img src="36.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="37">
+                            <img src="37.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="38">
+                            <img src="38.JPEG" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="39">
+                            <img src="39.jpg" alt="playera">
+                        </div>
+
+                        <div class="image-item fade-in" data-product-id="40">
+                            <img src="40.jpg" alt="playera">
+                        </div>
+                        <div class="image-item fade-in" data-product-id="41">
+                            <img src="41.JPEG" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="42">
+                            <img src="42.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="43">
+                            <img src="43.JPEG" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="44">
+                            <img src="44.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="45">
+                            <img src="45.jpg" alt="playera">
+                        </div>
+            
+                        <div class="image-item fade-in" data-product-id="46">
+                            <img src="46.jpg" alt="playera">
+                        </div>
+            
+                            <div class="image-item fade-in" data-product-id="47">
+                                <img src="47.jpg" alt="playera">
+                            </div>
+                
+                            <div class="image-item fade-in" data-product-id="48">
+                                <img src="48.jpg" alt="playera">
+                            </div>
+                
+                            <div class="image-item fade-in" data-product-id="49">
+                                <img src="49.jpg" alt="playera">
+                            </div>
+                
+                            <div class="image-item fade-in" data-product-id="50">
+                                <img src="50.jpg" alt="playera">
+                            </div>
+                
+                            <div class="image-item fade-in" data-product-id="51">
+                                <img src="51.jpg" alt="playera">
+                            </div>
+                
+                            <div class="image-item fade-in" data-product-id="52">
+                                <img src="52.JPEG" alt="playera">
+                            </div>
+                
+                                <div class="image-item fade-in" data-product-id="53">
+                                    <img src="53.JPEG" alt="playera">
+                                </div>
+            
+                                    <div class="image-item fade-in" data-product-id="54">
+                                        <img src="54.JPEG" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="55">
+                                        <img src="55.JPEG" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="56">
+                                        <img src="56.jpg" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="57">
+                                        <img src="57.JPEG" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="58">
+                                        <img src="58.jpg" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="59">
+                                        <img src="59.jpg" alt="playera">
+                                    </div>
+                                    <div class="image-item fade-in" data-product-id="60">
+                                        <img src="60.jpg" alt="playera">
+                                    </div>
+                                    <div class="image-item fade-in" data-product-id="61">
+                                        <img src="61.jpg" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="62">
+                                        <img src="62.jpg" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="63">
+                                        <img src="63.JPEG" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="64">
+                                        <img src="64.jpg" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="65">
+                                        <img src="65.jpg" alt="playera">
+                                    </div>
+                        
+                                    <div class="image-item fade-in" data-product-id="66">
+                                        <img src="66.jpg" alt="playera">
+                                    </div>
+                        
+                                        <div class="image-item fade-in" data-product-id="67">
+                                            <img src="67.jpg" alt="playera">
+                                        </div>
+                            
+                                        <div class="image-item fade-in" data-product-id="68">
+                                            <img src="68.jpg" alt="playera">
+                                        </div>
+                            
+                                        <div class="image-item fade-in" data-product-id="69">
+                                            <img src="69.JPEG" alt="playera">
+                                        </div>
+                            
+                            
+                                        <div class="image-item fade-in" data-product-id="71">
+                                            <img src="71.jpg" alt="playera">
+                                        </div>
+                            
+                                        <div class="image-item fade-in" data-product-id="72">
+                                            <img src="72.jpg" alt="playera">
+                                        </div>
+                            
+                                            <div class="image-item fade-in" data-product-id="73">
+                                                <img src="73.JPEG" alt="playera">
+                                            </div>
+                        
+                                                <div class="image-item fade-in" data-product-id="74">
+                                                    <img src="74.JPEG" alt="playera">
+                                                </div>
+                                    
+                                                <div class="image-item fade-in" data-product-id="75">
+                                                    <img src="75.jpg" alt="playera">
+                                                </div>
+                                    
+                                                <div class="image-item fade-in" data-product-id="76">
+                                                    <img src="76.jpg" alt="playera">
+                                                </div>
+                                    
+                                                <div class="image-item fade-in" data-product-id="77">
+                                                    <img src="77.jpg" alt="playera">
+                                                </div>
+                                    
+                                                <div class="image-item fade-in" data-product-id="78">
+                                                    <img src="78.JPEG" alt="playera">
+                                                </div>
+                                    
+                                                <div class="image-item fade-in" data-product-id="79">
+                                                    <img src="79.jpg" alt="playera">
+                                                </div>
+                                                <div class="image-item fade-in" data-product-id="80">
+                                                    <img src="80.JPEG" alt="playera">
+                                                </div>                                            
+                                                
+
+                                                <div class="image-item fade-in" data-product-id="999">
+                                                    <img src="999.JPEG" alt="playera">
+                                                </div>
+                 
+                                                <div class="image-grid-separator">
+                                                    <p>talla   ...L...</p>
+                                                </div>
+                                          
+
+       
+<div class="image-item fade-in" data-product-id="81">
+    <img src="l81.JPEG" alt="playera">
+</div>
+
+<div class="image-item fade-in" data-product-id="82">
+    <img src="l82.jpg" alt="playera">
+</div>
+
+<div class="image-item fade-in" data-product-id="83">
+    <img src="l83.jpg" alt="playera">
+</div>
+
+<div class="image-item fade-in" data-product-id="84">
+    <img src="l84.jpg" alt="playera">
+</div>
+
+<div class="image-item fade-in" data-product-id="85">
+    <img src="l85.jpg" alt="playera">
+</div>
+
+
+
+
+
+
+<div class="load-more-button-container">
+    <button id="loadMoreBtn">Ver más</button>
+</div>
+
+<div class="hidden-images" id="moreImages">
+
+    <div class="image-item fade-in" data-product-id="suda1">
+        <img src="suda1.JPG" alt="sudadero">
+    </div>
+
+    <div class="image-item fade-in" data-product-id="suda2">
+        <img src="suda2.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda3">
+        <img src="suda3.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda4">
+        <img src="suda4.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda5">
+        <img src="suda5.JPG" alt="sudadero">
+    </div>
+   
+    <div class="image-item fade-in" data-product-id="suda6">
+        <img src="suda6.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda7">
+        <img src="suda7.png.JPEG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda8">
+        <img src="suda8.png.JPEG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda9">
+        <img src="suda9.png.JPEG" alt="sudadero">
+    </div>
+   
+    <div class="image-item fade-in" data-product-id="suda10">
+        <img src="suda10.png.JPEG" alt="sudadero">
+    </div>
+
+    <div class="image-item fade-in" data-product-id="suda11">
+        <img src="suda11.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda12">
+        <img src="suda12.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda13">
+        <img src="suda13.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda14">
+        <img src="suda14.png.JPEG" alt="sudadero">
+    </div>
+   
+    <div class="image-item fade-in" data-product-id="suda15">
+        <img src="suda15.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda16">
+        <img src="suda16.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda17">
+        <img src="suda17.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda18">
+        <img src="suda18.png.JPEG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda19">
+        <img src="suda19.JPG" alt="sudadero">
+    </div>
+
+   
+
+    <div class="image-item fade-in" data-product-id="suda20">
+        <img src="suda21.JPG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda21">
+        <img src="suda22.png.JPEG" alt="sudadero">
+    </div>
+   
+
+    <div class="image-item fade-in" data-product-id="suda22">
+        <img src="suda23.png.JPEG" alt="sudadero">
+    </div>
+   
+    <div class="image-item fade-in" data-product-id="suda23">
+        <img src="suda24.png.JPEG" alt="sudadero">
+    </div>
+   
+
+
+    <div class="image-item fade-in" data-product-id="suda24">
+        <img src="suda25.JPEG" alt="sudadero">
+    </div>
+   
+
+   
+
+</div>
+</div>
+</main>
+
+
+
+
+    <!-- Resto de los modales y popups (sin cambios) -->
+    <div id="inicioPopup" class="page-popup">
+        <div class="page-popup-content">
+            <span class="close-btn popup-close">&times;</span>
+            <h2>🏠 Inicio</h2>
+            <p>Bienvenido a nuestra tienda online. Aquí encontrarás los mejores productos con la mejor calidad y precios competitivos.</p>
+            <p>Explora nuestro catálogo y encuentra exactamente lo que necesitas.</p>
+            
+        </div>
+    </div>
+
+    <div id="perfilPopup" class="page-popup">
+        <div class="page-popup-content">
+            <span class="close-btn popup-close">&times;</span>
+            <h2>👤 Perfil</h2>
+            <p>Gestiona tu información personal, historial de pedidos y preferencias de compra.</p>
+            <p>Mantén tu perfil actualizado para una mejor experiencia de compra.</p>
+           
+        </div>
+    </div>
+
+    <div id="ajustesPopup" class="page-popup">
+        <div class="page-popup-content">
+            <span class="close-btn popup-close">&times;</span>
+            <h2>⚙️ Ajustes</h2>
+            <p>Configura tus preferencias de la aplicación, notificaciones y métodos de pago.</p>
+            <p>Personaliza tu experiencia de compra según tus necesidades.</p>
+            
+        </div>
+    </div>
+
+    <div id="mensajesPopup" class="page-popup">
+        <div class="page-popup-content">
+            <span class="close-btn popup-close">&times;</span>
+            <h2>💬 Mensajes</h2>
+            <p>Revisa tus mensajes, notificaciones de pedidos y comunicaciones con nuestro equipo de soporte.</p>
+            <p>Mantente al día con todas las actualizaciones importantes.</p>
+            
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content-wrapper"> <span class="close-btn modal-close">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <img id="modalImage" src="" alt="Imagen de producto">
+            <p id="modalDescription"></p>
+            <p class="price" id="modalPrice"></p>
+            <button class="add-to-cart-btn">Agregar al Carrito</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="cartPopup" class="cart-popup">
+        <div class="cart-content">
+            <span class="close-btn cart-close">&times;</span>
+            <h2>🛒 Confirmar Pedido</h2>
+            
+            <div class="cart-product-summary">
+                <img id="cartProductImage" src="" alt="Imagen del producto en carrito">
+                <h4 id="cartProductTitle"></h4>
+                <p id="cartProductPrice" class="price"></p>
+            </div>
+
+            <form class="cart-form" id="cartForm">
+                <div class="form-group">
+                    <label for="userName">Tu Nombre:</label>
+                    <input type="text" id="userName" name="userName" required placeholder="Ingresa tu nombre">
+                </div>
+
+                <label>Color:</label>
+                <div class="option-buttons" id="colorOptions">
+                    <button type="button" data-option-type="color" data-value="Rojo">Rojo</button>
+                    <button type="button" data-option-type="color" data-value="Azul">Azul</button>
+                    <button type="button" data-option-type="color" data-value="Negro">Negro</button>
+                    <button type="button" data-option-type="color" data-value="Blanco">Blanco</button>
+                    <button type="button" data-option-type="color" data-value="Gris">Gris</button>
+                </div>
+
+                <label>Estilo:</label>
+                <div class="option-buttons" id="styleOptions">
+                    <button type="button" data-option-type="style" data-value="Moderno">Moderno</button>
+                    <button type="button" data-option-type="style" data-value="Deportivo">Deportivo</button>
+                  
+                    <button type="button" data-option-type="style" data-value="Casual">Casual</button>
+                </div>
+
+                <label>Talla:</label>
+                <div class="option-buttons" id="sizeOptions">
+            
+                    <button type="button" data-option-type="size" data-value="S">S</button>
+                    <button type="button" data-option-type="size" data-value="M">M</button>
+                    <button type="button" data-option-type="size" data-value="L">L</button>
+                   
+                </div>
+                
+                <button type="submit" class="confirm-order-btn">Confirmar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content-wrapper">
+            <img src="" alt="Imagen grande" id="modalImage">
+            </div>
+    </div>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+
+      
+
+    <footer>SUPER MARVIN</footer>
+
+    <!-- JavaScript INCORPORADO AQUÍ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="oficial.js"></script>
+      
+</body>
+</html>
