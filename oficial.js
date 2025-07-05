@@ -773,7 +773,7 @@ document.addEventListener('DOMContentLoaded', function() {
         whatsappMessage += `¡Hola! Me gustaría confirmar este pedido.`;
 
 
-        const whatsappNumber = "+14084308346"; // <-- ¡CAMBIA ESTE NÚMERO!
+        const whatsappNumber = "+14088541865"; // <-- ¡CAMBIA ESTE NÚMERO!
         const encodedMessage = encodeURIComponent(whatsappMessage);
         window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
 
